@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <configuration>
+  <conversionRule conversionWord="pid"
+                  converterClass="mesosphere.marathon.ProcessIdConverter" />
     <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%highlight(%-5level)[%date{HH:mm:ss} %logger{0}] %message%n</pattern>
+            <pattern>[%pid] %highlight(%-5level)[%date{HH:mm:ss} %logger{0}] %message%n</pattern>
         </encoder>
     </appender>
 
